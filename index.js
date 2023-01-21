@@ -13,7 +13,7 @@ dotenv.config()
 
 const app = express();
 const MONGO_URL = process.env.MONGO_URL
-const port = process.env.port
+const port = 4000
 const client = new MongoClient(MONGO_URL);
 await client.connect;
 
