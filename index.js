@@ -7,7 +7,6 @@ import { passwordGenarator } from "./passwordGenrator.js";
 import bcrypt from "bcrypt"
 import loginRouter from "./login_router.js";
 import * as dotenv from 'dotenv';
-dotenv.config()
 
 
 
@@ -19,6 +18,8 @@ await client.connect;
 
 // ?middileware
 app.use(cors())
+dotenv.config()
+
 app.use(express.json())
 app.get("/", (req, res) => {
     res.send("Succesfully iam ruuning")
