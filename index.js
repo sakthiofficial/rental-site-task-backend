@@ -11,6 +11,8 @@ import * as dotenv from 'dotenv';
 
 
 const app = express();
+dotenv.config()
+
 const MONGO_URL = process.env.MONGO_URL
 const port = 4000
 const client = new MongoClient(MONGO_URL);
@@ -18,7 +20,6 @@ await client.connect;
 
 // ?middileware
 app.use(cors())
-dotenv.config()
 
 app.use(express.json())
 app.get("/", (req, res) => {
