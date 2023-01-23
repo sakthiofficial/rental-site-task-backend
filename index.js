@@ -7,11 +7,11 @@ import { passwordGenarator } from "./passwordGenrator.js";
 import bcrypt from "bcrypt"
 import loginRouter from "./login_router.js";
 import * as dotenv from 'dotenv';
-
+dotenv.config()
 
 
 const app = express();
-dotenv.config()
+
 
 const MONGO_URL = process.env.MONGO_URL
 const port = 4000
